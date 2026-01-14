@@ -20,24 +20,24 @@ def analyze_text(text):
 
 def display_top_words(freq, top_n=5):
     sorted_words = sorted(freq.items(), key=lambda x: x[1], reverse=True)
-    print("\n📊 Most Frequent Words:")
+    print("\n Most Frequent Words:")
     for word, count in sorted_words[:top_n]:
         print(f"{word}: {count}")
 
 
 def save_report(data):
     with open("report.txt", "w") as file:
-        file.write("📄 TEXT ANALYSIS REPORT\n\n")
+        file.write("TEXT ANALYSIS REPORT\n\n")
         file.write(f"Words: {data[0]}\n")
         file.write(f"Characters: {data[1]}\n")
         file.write(f"Sentences: {data[2]}\n")
         file.write(f"Paragraphs: {data[3]}\n\n")
 
-    print("✅ Report saved as report.txt")
+    print("Report saved as report.txt")
 
 
 def main():
-    print("📝 Word Counter")
+    print("Word Counter")
 
     choice = input("Analyze (1) Text input or (2) File? ")
 
@@ -49,10 +49,10 @@ def main():
             with open(filename, "r") as file:
                 text = file.read()
         except FileNotFoundError:
-            print("❌ File not found.")
+            print("File not found.")
             return
     else:
-        print("❌ Invalid choice.")
+        print("Invalid choice.")
         return
 
     data = analyze_text(text)
