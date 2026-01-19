@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is the output of print(2 ** 3)?",
+    "options": ["6", "8", "9", "Error"],
+    "answer": "8"
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["func", "define", "def", "lambda"],
+    "answer": "def"
+  },
+  {
+    "question": "Which data type is used to store key-value pairs in Python?",
+    "options": ["list", "tuple", "dictionary", "set"],
+    "answer": "dictionary"
+  }
+]
+
