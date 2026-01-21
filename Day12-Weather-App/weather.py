@@ -18,28 +18,9 @@ def get_weather(city):
         response = requests.get(BASE_URL, params=params, timeout=5)
         response.raise_for_status()
         return response.json()
-
-    except requests.HTTPError as e:
-        if response.status_code == 401:
-            print("⚠ API key not active yet. Using mock weather data.")
-            return {
-                "main": {
-                    "temp": 30,
-                    "feels_like": 32,
-                    "humidity": 70
-                },
-                "weather": [
-                    {"description": "clear sky"}
-                ]
-            }
-        else:
-            print("❌ HTTP error:", e)
-            return None
-
-    except requests.RequestException as e:
-        print("❌ Network error:", e)
+    except requests.RequestException:
+        print("❌ Unable to fetch weather data.")
         return None
-
 
 def display_weather(data):
     temp = data["main"]["temp"]
