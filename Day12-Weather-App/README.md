@@ -12,3 +12,6 @@ A command-line weather application that fetches real-time weather data using an 
 ## How to Run
 ```bash
 python weather.py
+
+⚠ Note: OpenWeatherMap API key activation may take time.
+Mock data is used automatically if the API key is not yet active.
