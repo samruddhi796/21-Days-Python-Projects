@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "date": "2026-01-23 21:04",
+        "weight": 5.0,
+        "height": 2.0,
+        "bmi": 1.25,
+        "category": "Underweight"
+    }
+]
